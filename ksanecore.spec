@@ -5,7 +5,7 @@
 
 Summary:	A library for dealing with scanners
 Name:		ksanecore
-Version:	23.04.0
+Version:	23.04.1
 Release:	1
 Group:		System/Libraries
 License:	GPLv2
