@@ -18,7 +18,7 @@ Version:	24.08.2
 Release:	%{?git:0.%{git}.}1
 Group:		System/Libraries
 License:	GPLv2
-Url:		http://www.kde.org
+Url:		https://www.kde.org
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/libraries/ksanecore/-/archive/%{gitbranch}/ksanecore-%{gitbranchd}.tar.bz2#/ksanecore-%{git}.tar.bz2
 %else
