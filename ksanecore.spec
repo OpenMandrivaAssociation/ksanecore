@@ -57,38 +57,6 @@ LibKSane is a KDE interface for SANE library to control flat scanner.
 
 #------------------------------------------------
 
-%package -n %{lib5name}
-Summary:	A library for dealing with scanners
-Group:		System/Libraries
-Requires:	%{name} = %{EVRD}
-%rename %{oldlibname}
-
-%description -n %{lib5name}
-LibKSane is a KDE interface for SANE library to control flat scanners.
-
-%files -n %{lib5name}
-%{_libdir}/libKSaneCore.so.1*
-%{_libdir}/libKSaneCore.so.%(echo %{version} |cut -d. -f1)*
-
-#-----------------------------------------------------------------------------
-
-%package -n %{dev5name}
-Summary:	Devel stuff for %{name}
-Group:		Development/KDE and Qt
-Requires:	sane-devel
-Requires:	%{lib5name} = %{EVRD}
-
-%description  -n %{dev5name}
-This package contains header files needed if you wish to build applications
-based on %{name}.
-
-%files  -n %{dev5name}
-%{_includedir}/KSaneCore
-%{_libdir}/libKSaneCore.so
-%{_libdir}/cmake/KSaneCore
-
-#------------------------------------------------
-
 %package -n %{libname}
 Summary:	A library for dealing with scanners for Qt 6.x
 Group:		System/Libraries
@@ -118,7 +86,48 @@ based on %{name}.
 %{_libdir}/libKSaneCore6.so
 %{_libdir}/cmake/KSaneCore6
 
+#------------------------------------------------
+
+%package -n %{lib5name}
+Summary:	A library for dealing with scanners
+Group:		System/Libraries
+Requires:	%{name} = %{EVRD}
+Version:	24.08.3
+%rename %{oldlibname}
+
+%description -n %{lib5name}
+LibKSane is a KDE interface for SANE library to control flat scanners.
+
+%files -n %{lib5name}
+%{_libdir}/libKSaneCore.so.1*
+%{_libdir}/libKSaneCore.so.%(echo %{version} |cut -d. -f1)*
+
+#-----------------------------------------------------------------------------
+
+%package -n %{dev5name}
+Summary:	Devel stuff for %{name}
+Group:		Development/KDE and Qt
+Requires:	sane-devel
+Requires:	%{lib5name} = %{EVRD}
+Version:	24.08.3
+
+%description  -n %{dev5name}
+This package contains header files needed if you wish to build applications
+based on %{name}.
+
+%files  -n %{dev5name}
+%{_includedir}/KSaneCore
+%{_libdir}/libKSaneCore.so
+%{_libdir}/cmake/KSaneCore
+
 #----------------------------------------------------------------------
+
+%package fake
+# Just to reset version -- drop once we get rid of P5
+Version:	24.12.0
+Summary:	Fake package that doesn't exist
+
+%description fake
 
 %prep
 %autosetup -p1 -n %{name}-%{?git:%{gitbranchd}}%{!?git:%{version}}
