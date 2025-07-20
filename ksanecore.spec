@@ -14,7 +14,7 @@
 
 Summary:	A library for dealing with scanners
 Name:		ksanecore
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 Group:		System/Libraries
 License:	GPLv2
@@ -25,7 +25,7 @@ Source0:	https://invent.kde.org/libraries/ksanecore/-/archive/%{gitbranch}/ksane
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 %endif
 %if %{with qt5}
-# Qt 5 support was dropped in 24.12.0
+# Qt 5 support was dropped in 24.12.0, but it's still useful for Krita
 Source1:	http://download.kde.org/%{stable}/release-service/24.08.3/src/%{name}-24.08.3.tar.xz
 %endif
 BuildRequires:	sane-devel
@@ -124,7 +124,7 @@ based on %{name}.
 
 %package fake
 # Just to reset version -- drop once we get rid of P5
-Version:	25.04.0
+Version:	25.04.3
 Summary:	Fake package that doesn't exist
 
 %description fake
