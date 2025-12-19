@@ -39,6 +39,7 @@ BuildRequires:	cmake(KF5TextWidgets)
 BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5Widgets)
 BuildRequires:	pkgconfig(Qt5Test)
+BuildRequires:	qmake5
 %endif
 BuildRequires:  cmake(KF6Config)
 BuildRequires:  cmake(KF6I18n)
