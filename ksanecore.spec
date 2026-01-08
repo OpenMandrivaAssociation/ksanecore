@@ -14,7 +14,7 @@
 
 Summary:	A library for dealing with scanners
 Name:		ksanecore
-Version:	25.12.0
+Version:	25.12.1
 Release:	%{?git:0.%{git}.}1
 Group:		System/Libraries
 License:	GPLv2
@@ -125,7 +125,7 @@ based on %{name}.
 
 %package fake
 # Just to reset version -- drop once we get rid of P5
-Version:	25.12.0
+Version:	25.12.1
 Summary:	Fake package that doesn't exist
 
 %description fake
